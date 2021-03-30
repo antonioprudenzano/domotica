@@ -1,0 +1,86 @@
+{
+  "document": {
+    "parse_time": 0.06,
+    "analysis_time": 0.06
+  },
+  "match_info": {
+    "pivot_attributes": {
+      "match": 3,
+      "match_with_combo": 0
+    },
+    "sequences": {
+      "match": 3
+    },
+    "rules": {
+      "match": 2,
+      "segment": [],
+      "categorization": [],
+      "extraction": [
+        {
+          "template": "LIGHT",
+          "fields": [
+            {
+              "field": "NAME",
+              "value": "luce",
+              "instance": [
+                {
+                  "group_by": 0,
+                  "text": "luce",
+                  "rule_details": [
+                    {
+                      "id": 2,
+                      "label": ""
+                    },
+                    {
+                      "id": 1,
+                      "label": ""
+                    }
+                  ],
+                  "pos": 8,
+                  "len": 4,
+                  "snt": 1,
+                  "snt_begin": 0,
+                  "snt_end": 11,
+                  "syncon": 221898,
+                  "ancestor": -1
+                }
+              ]
+            },
+            {
+              "field": "STATE",
+              "value": "on",
+              "instance": [
+                {
+                  "group_by": 0,
+                  "text": "on",
+                  "rule_details": [
+                    {
+                      "id": 2,
+                      "label": ""
+                    }
+                  ],
+                  "pos": 5,
+                  "len": 2,
+                  "snt": 1,
+                  "snt_begin": 0,
+                  "snt_end": 11,
+                  "syncon": -1,
+                  "ancestor": -1
+                }
+              ]
+            }
+          ],
+          "instances": 0
+        }
+      ],
+      "tagger": []
+    },
+    "checksum": "0393ad55"
+  },
+  "script_info": {
+    "onTagger": []
+  },
+  "properties": {
+    "ANNOTATIONS_MD5": ""
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "document": {
+    "parse_time": 0.06,
+    "analysis_time": 0.06
+  },
+  "match_info": {
+    "pivot_attributes": {
+      "match": 6,
+      "match_with_combo": 0
+    },
+    "sequences": {
+      "match": 6
+    },
+    "rules": {
+      "match": 1,
+      "segment": [],
+      "categorization": [],
+      "extraction": [
+        {
+          "template": "THERMOSTAT",
+          "fields": [
+            {
+              "field": "ROOM",
+              "value": "kitchen",
+              "instance": [
+                {
+                  "group_by": 100,
+                  "text": "kitchen",
+                  "rule_details": [
+                    {
+                      "id": 5,
+                      "label": ""
+                    }
+                  ],
+                  "pos": 4,
+                  "len": 7,
+                  "snt": 1,
+                  "snt_begin": 0,
+                  "snt_end": 35,
+                  "syncon": 100043164,
+                  "ancestor": -1
+                }
+              ]
+            },
+            {
+              "field": "TEMPERATURE",
+              "value": "26 degree",
+              "instance": [
+                {
+                  "group_by": 200,
+                  "text": "26 degrees",
+                  "rule_details": [
+                    {
+                      "id": 5,
+                      "label": ""
+                    }
+                  ],
+                  "pos": 26,
+                  "len": 10,
+                  "snt": 1,
+                  "snt_begin": 0,
+                  "snt_end": 35,
+                  "syncon": -1,
+                  "ancestor": 59188
+                }
+              ]
+            }
+          ],
+          "instances": 0
+        }
+      ],
+      "tagger": []
+    },
+    "checksum": "049beb8d"
+  },
+  "script_info": {
+    "onTagger": []
+  },
+  "properties": {
+    "ANNOTATIONS_MD5": ""
+  }
+}

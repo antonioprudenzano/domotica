@@ -1,0 +1,117 @@
+{
+  "document": {
+    "parse_time": 0.09,
+    "analysis_time": 0.09
+  },
+  "match_info": {
+    "pivot_attributes": {
+      "match": 7,
+      "match_with_combo": 0
+    },
+    "sequences": {
+      "match": 7
+    },
+    "rules": {
+      "match": 3,
+      "segment": [],
+      "categorization": [],
+      "extraction": [
+        {
+          "template": "LIGHT",
+          "fields": [
+            {
+              "field": "NAME",
+              "value": "luce",
+              "instance": [
+                {
+                  "group_by": 0,
+                  "text": "luce",
+                  "rule_details": [
+                    {
+                      "id": 3,
+                      "label": ""
+                    },
+                    {
+                      "id": 2,
+                      "label": ""
+                    },
+                    {
+                      "id": 1,
+                      "label": ""
+                    }
+                  ],
+                  "pos": 8,
+                  "len": 4,
+                  "snt": 1,
+                  "snt_begin": 0,
+                  "snt_end": 26,
+                  "syncon": 221900,
+                  "ancestor": -1
+                }
+              ]
+            },
+            {
+              "field": "ROOM",
+              "value": "bedroom",
+              "instance": [
+                {
+                  "group_by": 100,
+                  "text": "bedroom",
+                  "rule_details": [
+                    {
+                      "id": 3,
+                      "label": ""
+                    }
+                  ],
+                  "pos": 20,
+                  "len": 7,
+                  "snt": 1,
+                  "snt_begin": 0,
+                  "snt_end": 26,
+                  "syncon": 100193837,
+                  "ancestor": -1
+                }
+              ]
+            },
+            {
+              "field": "STATE",
+              "value": "on",
+              "instance": [
+                {
+                  "group_by": 0,
+                  "text": "on",
+                  "rule_details": [
+                    {
+                      "id": 3,
+                      "label": ""
+                    },
+                    {
+                      "id": 2,
+                      "label": ""
+                    }
+                  ],
+                  "pos": 5,
+                  "len": 2,
+                  "snt": 1,
+                  "snt_begin": 0,
+                  "snt_end": 26,
+                  "syncon": -1,
+                  "ancestor": -1
+                }
+              ]
+            }
+          ],
+          "instances": 0
+        }
+      ],
+      "tagger": []
+    },
+    "checksum": "049beb8d"
+  },
+  "script_info": {
+    "onTagger": []
+  },
+  "properties": {
+    "ANNOTATIONS_MD5": ""
+  }
+}

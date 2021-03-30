@@ -1,0 +1,230 @@
+{
+  "header": {
+    "version": "VR4",
+    "language": "EN",
+    "startddis_flags": [
+      "2048: disable cleanparagraph",
+      "4096: token absolute position"
+    ],
+    "code": 150
+  },
+  "paragraphs": [
+    {
+      "s": [
+        0
+      ],
+      "p": 0,
+      "l": 30
+    }
+  ],
+  "sentences": [
+    {
+      "g": [
+        0,
+        1,
+        2
+      ],
+      "p": 0,
+      "l": 30
+    }
+  ],
+  "groups": [
+    {
+      "gk": "NP",
+      "lt": 2,
+      "t": [
+        0,
+        1,
+        2
+      ],
+      "p": 0,
+      "l": 23
+    },
+    {
+      "gk": "PP",
+      "lt": 4,
+      "t": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "p": 24,
+      "l": 6
+    },
+    {
+      "gk": "CR"
+    }
+  ],
+  "tokens": [
+    {
+      "p": 0,
+      "l": 3,
+      "gt": "ADJ",
+      "gd": "IIQB",
+      "ga": {
+        "gender": "undefined",
+        "number": "undefined",
+        "adj_type": "Q",
+        "adj_grade": "base"
+      },
+      "bf": "set",
+      "bfid": 470041,
+      "syn": 86573,
+      "esyn": [
+        93406
+      ],
+      "it": 1,
+      "ia": 1,
+      "pos": "_"
+    },
+    {
+      "p": 4,
+      "l": 8,
+      "gt": "NOU",
+      "gd": "NI",
+      "ga": {
+        "gender": "neutral",
+        "number": "undefined"
+      },
+      "bf": "penisola",
+      "bfid": 516588,
+      "syn": -1,
+      "it": 1,
+      "ia": 1,
+      "pos": "_"
+    },
+    {
+      "p": 13,
+      "l": 10,
+      "gt": "NOU",
+      "gd": "NS",
+      "ga": {
+        "gender": "neutral",
+        "number": "singular"
+      },
+      "bf": "brightness",
+      "bfid": 319617,
+      "syn": 112762,
+      "esyn": [
+        138523
+      ],
+      "it": 1,
+      "ia": 1,
+      "pos": "_"
+    },
+    {
+      "p": 24,
+      "l": 2,
+      "gt": "PRE",
+      "gd": "",
+      "bf": "to",
+      "bfid": -1,
+      "it": 1,
+      "ia": 1,
+      "pos": "_"
+    },
+    {
+      "p": 27,
+      "l": 3,
+      "gt": "NOU.PCT",
+      "gd": "__",
+      "bf": "50%",
+      "bfid": -1,
+      "syn": -436162,
+      "vdad": 56879,
+      "evdad": [
+        100011229,
+        59701
+      ],
+      "it": 1,
+      "ia": 0,
+      "pos": "_"
+    },
+    {
+      "p": 27,
+      "l": 2,
+      "gt": "NOU",
+      "gd": "II",
+      "bfid": -1,
+      "it": 0,
+      "ia": 1
+    },
+    {
+      "p": 29,
+      "l": 1,
+      "gt": "PNT",
+      "gd": "",
+      "bfid": -1,
+      "it": 0,
+      "ia": 1
+    }
+  ],
+  "domains": [],
+  "mainsentences": [
+    {
+      "id": 0,
+      "text": "set penisola brightness to 50%",
+      "s": 100.0
+    }
+  ],
+  "maingroups": [
+    {
+      "text": "penisola brightness",
+      "s": 89.7,
+      "pl": [
+        [
+          4,
+          19
+        ]
+      ]
+    },
+    {
+      "text": "set penisola brightness",
+      "s": 10.199999,
+      "pl": [
+        [
+          0,
+          23
+        ]
+      ]
+    }
+  ],
+  "mainlemmas": [
+    {
+      "text": "brightness",
+      "s": 100.0
+    }
+  ],
+  "mainsyncons": [
+    {
+      "syn": 112762,
+      "esyn": [
+        138523
+      ],
+      "s": 86.4
+    },
+    {
+      "syn": 86573,
+      "esyn": [
+        93406
+      ],
+      "s": 13.5
+    }
+  ],
+  "entities": [
+    {
+      "bf": "50%",
+      "syn": -436162,
+      "pl": [
+        [
+          27,
+          3
+        ]
+      ],
+      "type": "PCT",
+      "record": []
+    }
+  ],
+  "logic": []
+}

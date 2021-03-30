@@ -1,0 +1,1 @@
+set kitchen brightness to 80%

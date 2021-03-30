@@ -1,0 +1,1 @@
+set kitchen thermostat to 26 degrees

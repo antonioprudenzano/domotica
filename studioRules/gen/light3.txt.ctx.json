@@ -1,0 +1,86 @@
+{
+  "document": {
+    "parse_time": 0.06,
+    "analysis_time": 0.06
+  },
+  "match_info": {
+    "pivot_attributes": {
+      "match": 6,
+      "match_with_combo": 0
+    },
+    "sequences": {
+      "match": 5
+    },
+    "rules": {
+      "match": 2,
+      "segment": [],
+      "categorization": [],
+      "extraction": [
+        {
+          "template": "LIGHT",
+          "fields": [
+            {
+              "field": "ROOM",
+              "value": "kitchen",
+              "instance": [
+                {
+                  "group_by": 0,
+                  "text": "kitchen",
+                  "rule_details": [
+                    {
+                      "id": 1,
+                      "label": ""
+                    },
+                    {
+                      "id": 2,
+                      "label": ""
+                    }
+                  ],
+                  "pos": 8,
+                  "len": 7,
+                  "snt": 1,
+                  "snt_begin": 0,
+                  "snt_end": 21,
+                  "syncon": 100043164,
+                  "ancestor": -1
+                }
+              ]
+            },
+            {
+              "field": "STATE",
+              "value": "on",
+              "instance": [
+                {
+                  "group_by": 200,
+                  "text": "on",
+                  "rule_details": [
+                    {
+                      "id": 1,
+                      "label": ""
+                    }
+                  ],
+                  "pos": 5,
+                  "len": 2,
+                  "snt": 1,
+                  "snt_begin": 0,
+                  "snt_end": 21,
+                  "syncon": -1,
+                  "ancestor": -1
+                }
+              ]
+            }
+          ],
+          "instances": 0
+        }
+      ],
+      "tagger": []
+    },
+    "checksum": "031fe391"
+  },
+  "script_info": {
+    "onTagger": []
+  },
+  "properties": {
+    "ANNOTATIONS_MD5": ""
+  }
+}

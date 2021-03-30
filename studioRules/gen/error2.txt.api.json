@@ -1,0 +1,235 @@
+{
+    "content": "set penisola brightness to 50%\n",
+    "language": "en",
+    "version": "sensei: 3.3.5; disambiguator: 15.0-QNTX-2016",
+    "paragraphs": [
+        {
+            "sentences": [
+                0
+            ],
+            "start": 0,
+            "end": 30
+        }
+    ],
+    "sentences": [
+        {
+            "phrases": [
+                0,
+                1,
+                2
+            ],
+            "start": 0,
+            "end": 30
+        }
+    ],
+    "phrases": [
+        {
+            "tokens": [
+                0,
+                1,
+                2
+            ],
+            "type": "NP",
+            "start": 0,
+            "end": 23
+        },
+        {
+            "tokens": [
+                3,
+                4
+            ],
+            "type": "PP",
+            "start": 24,
+            "end": 30
+        },
+        {
+            "tokens": [],
+            "type": "CR",
+            "start": 30,
+            "end": 30
+        }
+    ],
+    "tokens": [
+        {
+            "syncon": 86573,
+            "start": 0,
+            "end": 3,
+            "type": "ADJ",
+            "lemma": "set",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 0
+        },
+        {
+            "syncon": -1,
+            "start": 4,
+            "end": 12,
+            "type": "NOU",
+            "lemma": "penisola",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 0
+        },
+        {
+            "syncon": 112762,
+            "start": 13,
+            "end": 23,
+            "type": "NOU",
+            "lemma": "brightness",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 0
+        },
+        {
+            "syncon": -1,
+            "start": 24,
+            "end": 26,
+            "type": "PRE",
+            "lemma": "to",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 1
+        },
+        {
+            "syncon": -1,
+            "vsyn": {
+                "id": -436162,
+                "parent": 56879
+            },
+            "start": 27,
+            "end": 30,
+            "type": "NOU.PCT",
+            "lemma": "50%",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 1,
+            "atoms": [
+                {
+                    "start": 27,
+                    "end": 29,
+                    "type": "NOU",
+                    "lemma": "50"
+                },
+                {
+                    "start": 29,
+                    "end": 30,
+                    "type": "PNT",
+                    "lemma": "%"
+                }
+            ]
+        }
+    ],
+    "mainSentences": [
+        {
+            "value": "set penisola brightness to 50%",
+            "score": 100.0,
+            "start": 0,
+            "end": 30
+        }
+    ],
+    "mainPhrases": [
+        {
+            "value": "penisola brightness",
+            "score": 89.69,
+            "positions": [
+                {
+                    "start": 4,
+                    "end": 23
+                }
+            ]
+        },
+        {
+            "value": "set penisola brightness",
+            "score": 10.19,
+            "positions": [
+                {
+                    "start": 0,
+                    "end": 23
+                }
+            ]
+        }
+    ],
+    "mainLemmas": [
+        {
+            "value": "brightness",
+            "score": 100.0,
+            "positions": [
+                {
+                    "start": 13,
+                    "end": 23
+                }
+            ]
+        }
+    ],
+    "mainSyncons": [
+        {
+            "syncon": 112762,
+            "lemma": "brightness",
+            "score": 86.4,
+            "positions": [
+                {
+                    "start": 13,
+                    "end": 23
+                }
+            ]
+        },
+        {
+            "syncon": 86573,
+            "lemma": "set",
+            "score": 13.5,
+            "positions": [
+                {
+                    "start": 0,
+                    "end": 3
+                }
+            ]
+        }
+    ],
+    "topics": [],
+    "entities": [
+        {
+            "type": "PCT",
+            "lemma": "50%",
+            "syncon": -1,
+            "positions": [
+                {
+                    "start": 27,
+                    "end": 30
+                }
+            ]
+        }
+    ],
+    "extractions": [
+        {
+            "namespace": "0",
+            "template": "LIGHT",
+            "fields": [
+                {
+                    "name": "BRIGHTNESS",
+                    "value": "50%",
+                    "positions": [
+                        {
+                            "start": 27,
+                            "end": 30
+                        }
+                    ]
+                },
+                {
+                    "name": "NAME",
+                    "value": "penisola",
+                    "positions": [
+                        {
+                            "start": 4,
+                            "end": 12
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1628 @@
+{
+	"IT": {
+		"ART": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		}],
+		"PRE": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		}],
+		"NOU": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"ENT": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"NPR": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"NPH": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"ADJ": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"adj_type": "*"
+		},
+		{
+			"adj_grade": {
+				"B": "base",
+				"S": "superlative",
+				"s": "relative superlative",
+				"M": "comparative majority",
+				"m": "comparative minority",
+				"E": "comparative of equality"
+			}
+		}],
+		"VER": [{
+			"mood": {
+				"I": "indicative",
+				"C": "subjunctive",
+				"N": "conditional",
+				"M": "imperative",
+				"F": "infinitive",
+				"P": "participle",
+				"G": "gerund"
+			}
+		},
+		{
+			"tense": {
+				"0": "present",
+				"1": "present perfect",
+				"2": "imperfect",
+				"3": "past perfect",
+				"4": "past",
+				"5": "preterite perfect",
+				"6": "simple future",
+				"7": "future perfect"
+			}
+		},
+		{
+			"person": "*"
+		},
+		{
+			"form": "*"
+		}],
+		"AUX": [{
+			"aux_type": "*"
+		}],
+		"CON": [{
+			"con_type": "*"
+		}],
+		"PRO": [{
+			"pro_type": "*"
+		},
+		{
+			"reflexive": "*"
+		},
+		{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"pro_ante": "*"
+		},
+		{
+			"anaphora": "true"
+		}],
+		"PRT": [{
+			"prt_type": "*"
+		}]
+	},
+	"FR": {
+		"ART": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		}],
+		"PRE": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		}],
+		"NOU": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"ENT": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"NPR": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"NPH": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"ADJ": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"adj_type": "*"
+		},
+		{
+			"adj_grade": {
+				"B": "base",
+				"S": "superlative",
+				"s": "relative superlative",
+				"M": "comparative majority",
+				"m": "comparative minority",
+				"E": "comparative of equality"
+			}
+		}],
+		"VER": [{
+			"mood": {
+				"I": "indicative",
+				"C": "subjunctive",
+				"N": "conditional",
+				"M": "imperative",
+				"F": "infinitive",
+				"P": "participle",
+				"G": "gerund"
+			}
+		},
+		{
+			"tense": {
+				"0": "present",
+				"1": "present perfect",
+				"2": "imperfect",
+				"3": "past perfect",
+				"4": "past",
+				"5": "preterite perfect",
+				"6": "simple future",
+				"7": "future perfect"
+			}
+		},
+		{
+			"person": "*"
+		},
+		{
+			"form": "*"
+		}],
+		"AUX": [{
+			"aux_type": "*"
+		}],
+		"CON": [{
+			"con_type": "*"
+		}],
+		"PRO": [{
+			"pro_type": "*"
+		},
+		{
+			"reflexive": "*"
+		},
+		{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"pro_ante": "*"
+		},
+		{
+			"anaphora": "true"
+		}],
+		"PRT": [{
+			"prt_type": "*"
+		}]
+	},
+	"ES": {
+		"ART": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		}],
+		"PRE": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		}],
+		"NOU": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"ENT": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"NPR": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"NPH": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"ADJ": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"adj_type": "*"
+		},
+		{
+			"adj_grade": {
+				"B": "base",
+				"S": "superlative",
+				"s": "relative superlative",
+				"M": "comparative majority",
+				"m": "comparative minority",
+				"E": "comparative of equality"
+			}
+		}],
+		"VER": [{
+			"mood": {
+				"I": "indicative",
+				"C": "subjunctive",
+				"N": "conditional",
+				"M": "imperative",
+				"F": "infinitive",
+				"P": "participle",
+				"G": "gerund"
+			}
+		},
+		{
+			"tense": {
+				"0": "present",
+				"1": "present perfect",
+				"2": "imperfect",
+				"3": "past perfect",
+				"4": "past",
+				"5": "preterite perfect",
+				"6": "simple future",
+				"7": "future perfect"
+			}
+		},
+		{
+			"person": "*"
+		},
+		{
+			"form": "*"
+		}],
+		"AUX": [{
+			"aux_type": "*"
+		}],
+		"CON": [{
+			"con_type": "*"
+		}],
+		"PRO": [{
+			"pro_type": "*"
+		},
+		{
+			"reflexive": "*"
+		},
+		{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"pro_ante": "*"
+		},
+		{
+			"anaphora": "true"
+		}],
+		"PRT": [{
+			"prt_type": "*"
+		}]
+	},
+	"ZH": {
+		"ART": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		}],
+		"PRE": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		}],
+		"NOU": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"ENT": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"NPR": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"NPH": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"ADJ": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"adj_type": "*"
+		},
+		{
+			"adj_grade": {
+				"B": "base",
+				"S": "superlative",
+				"s": "relative superlative",
+				"M": "comparative majority",
+				"m": "comparative minority",
+				"E": "comparative of equality"
+			}
+		}],
+		"VER": [{
+			"mood": {
+				"I": "indicative",
+				"C": "subjunctive",
+				"N": "conditional",
+				"M": "imperative",
+				"F": "infinitive",
+				"P": "participle",
+				"G": "gerund"
+			}
+		},
+		{
+			"tense": {
+				"0": "present",
+				"1": "present perfect",
+				"2": "imperfect",
+				"3": "past perfect",
+				"4": "past",
+				"5": "preterite perfect",
+				"6": "simple future",
+				"7": "future perfect"
+			}
+		},
+		{
+			"person": "*"
+		},
+		{
+			"form": "*"
+		}],
+		"AUX": [{
+			"aux_type": "*"
+		}],
+		"CON": [{
+			"con_type": "*"
+		}],
+		"PRO": [{
+			"pro_type": "*"
+		},
+		{
+			"reflexive": "*"
+		},
+		{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"pro_ante": "*"
+		},
+		{
+			"anaphora": "true"
+		}],
+		"PRT": [{
+			"prt_type": "*"
+		}]
+	},
+	"PT": {
+		"ART": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		}],
+		"PRE": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		}],
+		"NOU": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"ENT": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"NPR": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"NPH": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"ADJ": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"adj_type": "*"
+		},
+		{
+			"adj_grade": {
+				"B": "base",
+				"S": "superlative",
+				"s": "relative superlative",
+				"M": "comparative majority",
+				"m": "comparative minority",
+				"E": "comparative of equality"
+			}
+		}],
+		"VER": [{
+			"mood": {
+				"I": "indicative",
+				"C": "subjunctive",
+				"N": "conditional",
+				"M": "imperative",
+				"F": "infinitive",
+				"P": "participle",
+				"G": "gerund"
+			}
+		},
+		{
+			"tense": {
+				"0": "present",
+				"1": "present perfect",
+				"2": "imperfect",
+				"3": "past perfect",
+				"4": "past",
+				"5": "preterite perfect",
+				"6": "simple future",
+				"7": "future perfect"
+			}
+		},
+		{
+			"person": "*"
+		},
+		{
+			"form": "*"
+		}],
+		"AUX": [{
+			"aux_type": "*"
+		}],
+		"CON": [{
+			"con_type": "*"
+		}],
+		"PRO": [{
+			"pro_type": "*"
+		},
+		{
+			"reflexive": "*"
+		},
+		{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"pro_ante": "*"
+		},
+		{
+			"anaphora": "true"
+		}],
+		"PRT": [{
+			"prt_type": "*"
+		}]
+	},
+	"JA": {
+		"ART": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		}],
+		"PRE": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		}],
+		"NOU": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"ENT": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"NPR": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"NPH": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "true"
+		}],
+		"ADJ": [{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"adj_type": "*"
+		},
+		{
+			"adj_grade": {
+				"B": "base",
+				"S": "superlative",
+				"s": "relative superlative",
+				"M": "comparative majority",
+				"m": "comparative minority",
+				"E": "comparative of equality"
+			}
+		}],
+		"VER": [{
+			"mood": {
+				"I": "indicative",
+				"C": "subjunctive",
+				"N": "conditional",
+				"M": "imperative",
+				"F": "infinitive",
+				"P": "participle",
+				"G": "gerund"
+			}
+		},
+		{
+			"tense": {
+				"0": "present",
+				"1": "present perfect",
+				"2": "imperfect",
+				"3": "past perfect",
+				"4": "past",
+				"5": "preterite perfect",
+				"6": "simple future",
+				"7": "future perfect"
+			}
+		},
+		{
+			"person": "*"
+		},
+		{
+			"form": "*"
+		}],
+		"AUX": [{
+			"aux_type": "*"
+		}],
+		"CON": [{
+			"con_type": "*"
+		}],
+		"PRO": [{
+			"pro_type": "*"
+		},
+		{
+			"reflexive": "*"
+		},
+		{
+			"gender": {
+				"M": "male",
+				"F": "female"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"pro_ante": "*"
+		},
+		{
+			"anaphora": "true"
+		}],
+		"PRT": [{
+			"prt_type": "*"
+		}]
+	},
+	"EN": {
+		"NOU": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "false"
+		}],
+		"ENT": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "false"
+		}],
+		"NPR": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "false"
+		}],
+		"NPH": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"anaphora": "false"
+		}],
+		"ADJ": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural"
+			}
+		},
+		{
+			"adj_type": "*"
+		},
+		{
+			"adj_grade": {
+				"B": "base",
+				"S": "superlative",
+				"s": "relative superlative",
+				"M": "comparative majority",
+				"m": "comparative minority",
+				"E": "comparative of equality"
+			}
+		}],
+		"CON": [{
+			"con_type": "*"
+		}],
+		"ADV": [{
+			"adv_type": "*"
+		}],
+		"VER": [{
+			"tense": {
+				"A": "simple present",
+				"B": "simple past",
+				"C": "ing form",
+				"D": "ed form",
+				"E": "present perfect",
+				"F": "past perfect",
+				"G": "future",
+				"H": "conditional"
+			}
+		},
+		{
+			"cont": {
+				"C": "continuous",
+				"N": "not continuous"
+			}
+		},
+		{
+			"person": "*"
+		},
+		{
+			"form": "*"
+		}],
+		"AUX": [{
+			"aux_type": "*"
+		}],
+		"PRO": [{
+			"pro_type": "*"
+		},
+		{
+			"pro_subtype": "*"
+		},
+		{
+			"pro_ante": "*"
+		},
+		{
+			"anaphora": "false"
+		}]
+	},
+	"AR": {
+		"NOU": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"D": "dual"
+			}
+		}],
+		"NPR": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"D": "dual"
+			}
+		}],
+		"NPH": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"D": "dual"
+			}
+		}],
+		"ADJ": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"D": "dual"
+			}
+		}]
+	},
+	"HE": {
+		"NOU": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"D": "dual"
+			}
+		}],
+		"NPR": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"D": "dual"
+			}
+		}],
+		"NPH": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"D": "dual"
+			}
+		}],
+		"ADJ": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"D": "dual"
+			}
+		}]
+	},
+	"DE": {
+		"CON": [{
+			"con_type": "*"
+		}],
+		"PRO": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral",
+				"I": "invariable"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"I": "invariable"
+			}
+		},
+		{
+			"case": "*"
+		},
+		{
+			"person": "*"
+		},
+		{
+			"pro_type": "*"
+		}],
+		"ADJ": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral",
+				"I": "invariable"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"I": "invariable"
+			}
+		},
+		{
+			"case": "*"
+		},
+		{
+			"adj_type": "*"
+		},
+		{
+			"adj_grade": {
+				"B": "base",
+				"C": "comparative",
+				"S": "superlative"
+			}
+		}],
+		"VER": [{
+			"mood": {
+				"I": "indicative",
+				"C": "subjunctive",
+				"N": "conditional",
+				"M": "imperative",
+				"F": "infinitive",
+				"P": "participle",
+				"G": "gerund"
+			}
+		},
+		{
+			"tense": {
+				"1": "present",
+				"2": "present perfect",
+				"3": "imperfect",
+				"4": "past perfect",
+				"5": "simple future",
+				"6": "future perfect"
+			}
+		},
+		{
+			"passive": {
+				"P": "passive",
+				"A": "active"
+			}
+		},
+		{
+			"person": "*"
+		}],
+		"NOU": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral",
+				"I": "invariable"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"I": "invariable"
+			}
+		},
+		{
+			"case": "*"
+		}],
+		"ADV": [{
+			"adv_type": "*"
+		}],
+		"ENT": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral",
+				"I": "invariable"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"I": "invariable"
+			}
+		},
+		{
+			"case": "*"
+		}],
+		"NPR": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral",
+				"I": "invariable"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"I": "invariable"
+			}
+		},
+		{
+			"case": "*"
+		}],
+		"NPH": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral",
+				"I": "invariable"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"I": "invariable"
+			}
+		},
+		{
+			"case": "*"
+		}]
+	},
+	"RU": {
+		"CON": [{
+			"con_type": "*"
+		}],
+		"PRE": [{
+			"pre_type": "*"
+		}],
+		"PRO": [{
+			"pro_type": "*"
+		},
+		{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral",
+				"I": "invariable"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"I": "invariable"
+			}
+		},
+		{
+			"case": "*"
+		},
+		{
+			"person": "*"
+		}],
+		"ADJ": [{
+			"adj_type": "*"
+		},
+		{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral",
+				"I": "invariable"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"I": "invariable"
+			}
+		},
+		{
+			"case": "*"
+		},
+		{
+			"adj_grade": {
+				"B": "base",
+				"S": "superlative",
+				"s": "relative superlative",
+				"M": "comparative majority",
+				"m": "comparative minority",
+				"E": "comparative of equality"
+			}
+		}],
+		"VER": [{
+			"tense": {
+				"1": "present",
+				"2": "present perfect",
+				"3": "imperfect",
+				"4": "past perfect",
+				"5": "simple future",
+				"6": "future perfect"
+			}
+		},
+		{
+			"mood": {
+				"I": "indicative",
+				"M": "imperative",
+				"F": "infinitive",
+				"P": "participle",
+				"G": "gerund"
+			}
+		},
+		{
+			"person": "*"
+		},
+		{
+			"form": "*"
+		}],
+		"NOU": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral",
+				"I": "invariable"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"I": "invariable"
+			}
+		},
+		{
+			"case": "*"
+		}],
+		"ADV": [{
+			"adv_type": "*"
+		},
+		{
+			"adv_grade": {
+				"B": "base",
+				"S": "superlative",
+				"s": "relative superlative",
+				"M": "comparative majority",
+				"m": "comparative minority",
+				"E": "comparative of equality"
+			}
+		}],
+		"ENT": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral",
+				"I": "invariable"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"I": "invariable"
+			}
+		},
+		{
+			"case": "*"
+		}],
+		"NPR": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral",
+				"I": "invariable"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"I": "invariable"
+			}
+		},
+		{
+			"case": "*"
+		}],
+		"NPH": [{
+			"gender": {
+				"M": "male",
+				"F": "female",
+				"N": "neutral",
+				"I": "invariable"
+			}
+		},
+		{
+			"number": {
+				"S": "singular",
+				"P": "plural",
+				"I": "invariable"
+			}
+		},
+		{
+			"case": "*"
+		}]
+	}
+}

@@ -1,0 +1,266 @@
+{
+  "header": {
+    "version": "VR4",
+    "language": "EN",
+    "startddis_flags": [
+      "2048: disable cleanparagraph",
+      "4096: token absolute position"
+    ],
+    "code": 150
+  },
+  "paragraphs": [
+    {
+      "s": [
+        0
+      ],
+      "p": 0,
+      "l": 27
+    }
+  ],
+  "sentences": [
+    {
+      "g": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "p": 0,
+      "l": 27
+    }
+  ],
+  "groups": [
+    {
+      "gk": "VP",
+      "pr": 0,
+      "pk": "INDEPENDENT",
+      "lt": 0,
+      "t": [
+        0,
+        1,
+        2
+      ],
+      "p": 0,
+      "l": 7
+    },
+    {
+      "gk": "NP",
+      "pr": 0,
+      "pk": "INDEPENDENT",
+      "lt": 3,
+      "t": [
+        3
+      ],
+      "p": 8,
+      "l": 4
+    },
+    {
+      "gk": "PP",
+      "pr": 0,
+      "pk": "INDEPENDENT",
+      "lt": 6,
+      "t": [
+        4,
+        5,
+        6
+      ],
+      "p": 13,
+      "l": 14
+    },
+    {
+      "gk": "CR"
+    }
+  ],
+  "tokens": [
+    {
+      "p": 0,
+      "l": 7,
+      "gt": "VER",
+      "gd": "AN__",
+      "ga": {
+        "tense": "simple present",
+        "cont": "not continuous"
+      },
+      "bf": "turn on",
+      "bfid": 499297,
+      "syn": 64976,
+      "esyn": [
+        68439
+      ],
+      "it": 1,
+      "ia": 0,
+      "pos": "_"
+    },
+    {
+      "p": 0,
+      "l": 4,
+      "gt": "VER",
+      "gd": "AN__",
+      "ga": {
+        "tense": "simple present",
+        "cont": "not continuous"
+      },
+      "bf": "turn",
+      "bfid": 499272,
+      "syn": -1,
+      "it": 0,
+      "ia": 1
+    },
+    {
+      "p": 5,
+      "l": 2,
+      "gt": "PRE",
+      "gd": "",
+      "ga": {},
+      "bf": "on",
+      "bfid": 432427,
+      "it": 0,
+      "ia": 1
+    },
+    {
+      "p": 8,
+      "l": 4,
+      "gt": "NOU",
+      "gd": "NS",
+      "ga": {
+        "gender": "neutral",
+        "number": "singular"
+      },
+      "bf": "luce",
+      "bfid": 412773,
+      "syn": 186319,
+      "esyn": [
+        221900
+      ],
+      "it": 1,
+      "ia": 1,
+      "pos": "_"
+    },
+    {
+      "p": 13,
+      "l": 2,
+      "gt": "PRE",
+      "gd": "",
+      "bf": "in",
+      "bfid": -1,
+      "it": 1,
+      "ia": 1,
+      "pos": "_"
+    },
+    {
+      "p": 16,
+      "l": 3,
+      "gt": "ART",
+      "gd": "",
+      "bf": "the",
+      "bfid": -1,
+      "it": 1,
+      "ia": 1,
+      "pos": "_"
+    },
+    {
+      "p": 20,
+      "l": 7,
+      "gt": "NOU",
+      "gd": "NS",
+      "ga": {
+        "gender": "neutral",
+        "number": "singular"
+      },
+      "bf": "bedroom",
+      "bfid": 312486,
+      "syn": 12963,
+      "esyn": [
+        100193837,
+        13482
+      ],
+      "it": 1,
+      "ia": 1,
+      "pos": "_"
+    }
+  ],
+  "domains": [
+    {
+      "name": "heraldry",
+      "r": 15,
+      "s": 9.3,
+      "m": 0
+    },
+    {
+      "name": "construction industry",
+      "r": 9,
+      "s": 1.8,
+      "m": 0
+    }
+  ],
+  "mainsentences": [
+    {
+      "id": 0,
+      "text": "turn on luce in the bedroom",
+      "s": 100.0
+    }
+  ],
+  "maingroups": [
+    {
+      "text": "luce in the bedroom",
+      "s": 56.6,
+      "pl": [
+        [
+          8,
+          19
+        ]
+      ]
+    },
+    {
+      "text": "turn on luce",
+      "s": 43.3,
+      "pl": [
+        [
+          0,
+          12
+        ]
+      ]
+    }
+  ],
+  "mainlemmas": [
+    {
+      "text": "luce",
+      "s": 64.5
+    },
+    {
+      "text": "bedroom",
+      "s": 35.4
+    }
+  ],
+  "mainsyncons": [
+    {
+      "syn": 186319,
+      "esyn": [
+        221900
+      ],
+      "s": 63.8
+    },
+    {
+      "syn": 12963,
+      "esyn": [
+        100193837
+      ],
+      "s": 36.1
+    }
+  ],
+  "entities": [],
+  "logic": [
+    [
+      {
+        "type": "action",
+        "value": "turn on",
+        "group": 0
+      },
+      {
+        "type": "object",
+        "value": "luce",
+        "group": 1
+      }
+    ]
+  ]
+}

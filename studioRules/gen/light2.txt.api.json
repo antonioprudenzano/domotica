@@ -1,0 +1,260 @@
+{
+    "content": "turn on luce in the bedroom\n",
+    "language": "en",
+    "version": "sensei: 3.3.5; disambiguator: 15.0-QNTX-2016",
+    "paragraphs": [
+        {
+            "sentences": [
+                0
+            ],
+            "start": 0,
+            "end": 27
+        }
+    ],
+    "sentences": [
+        {
+            "phrases": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "start": 0,
+            "end": 27
+        }
+    ],
+    "phrases": [
+        {
+            "tokens": [
+                0
+            ],
+            "type": "VP",
+            "start": 0,
+            "end": 7
+        },
+        {
+            "tokens": [
+                1
+            ],
+            "type": "NP",
+            "start": 8,
+            "end": 12
+        },
+        {
+            "tokens": [
+                2,
+                3,
+                4
+            ],
+            "type": "PP",
+            "start": 13,
+            "end": 27
+        },
+        {
+            "tokens": [],
+            "type": "CR",
+            "start": 27,
+            "end": 27
+        }
+    ],
+    "tokens": [
+        {
+            "syncon": 64976,
+            "start": 0,
+            "end": 7,
+            "type": "VER",
+            "lemma": "turn on",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 0,
+            "atoms": [
+                {
+                    "start": 0,
+                    "end": 4,
+                    "type": "VER",
+                    "lemma": "turn"
+                },
+                {
+                    "start": 5,
+                    "end": 7,
+                    "type": "PRE",
+                    "lemma": "on"
+                }
+            ]
+        },
+        {
+            "syncon": 186319,
+            "start": 8,
+            "end": 12,
+            "type": "NOU",
+            "lemma": "luce",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 1
+        },
+        {
+            "syncon": -1,
+            "start": 13,
+            "end": 15,
+            "type": "PRE",
+            "lemma": "in",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 2
+        },
+        {
+            "syncon": -1,
+            "start": 16,
+            "end": 19,
+            "type": "ART",
+            "lemma": "the",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 2
+        },
+        {
+            "syncon": 12963,
+            "start": 20,
+            "end": 27,
+            "type": "NOU",
+            "lemma": "bedroom",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 2
+        }
+    ],
+    "mainSentences": [
+        {
+            "value": "turn on luce in the bedroom",
+            "score": 100.0,
+            "start": 0,
+            "end": 27
+        }
+    ],
+    "mainPhrases": [
+        {
+            "value": "luce in the bedroom",
+            "score": 56.59,
+            "positions": [
+                {
+                    "start": 8,
+                    "end": 27
+                }
+            ]
+        },
+        {
+            "value": "turn on luce",
+            "score": 43.29,
+            "positions": [
+                {
+                    "start": 0,
+                    "end": 12
+                }
+            ]
+        }
+    ],
+    "mainLemmas": [
+        {
+            "value": "luce",
+            "score": 64.5,
+            "positions": [
+                {
+                    "start": 8,
+                    "end": 12
+                }
+            ]
+        },
+        {
+            "value": "bedroom",
+            "score": 35.4,
+            "positions": [
+                {
+                    "start": 20,
+                    "end": 27
+                }
+            ]
+        }
+    ],
+    "mainSyncons": [
+        {
+            "syncon": 186319,
+            "lemma": "luce",
+            "score": 63.79,
+            "positions": [
+                {
+                    "start": 8,
+                    "end": 12
+                }
+            ]
+        },
+        {
+            "syncon": 12963,
+            "lemma": "bedroom",
+            "score": 36.09,
+            "positions": [
+                {
+                    "start": 20,
+                    "end": 27
+                }
+            ]
+        }
+    ],
+    "topics": [
+        {
+            "label": "heraldry",
+            "id": 15,
+            "score": 9.3,
+            "winner": false
+        },
+        {
+            "label": "construction industry",
+            "id": 114,
+            "score": 1.79,
+            "winner": false
+        }
+    ],
+    "entities": [],
+    "extractions": [
+        {
+            "namespace": "0",
+            "template": "LIGHT",
+            "fields": [
+                {
+                    "name": "NAME",
+                    "value": "luce",
+                    "positions": [
+                        {
+                            "start": 8,
+                            "end": 12
+                        }
+                    ]
+                },
+                {
+                    "name": "ROOM",
+                    "value": "bedroom",
+                    "positions": [
+                        {
+                            "start": 20,
+                            "end": 27
+                        }
+                    ]
+                },
+                {
+                    "name": "STATE",
+                    "value": "on",
+                    "positions": [
+                        {
+                            "start": 5,
+                            "end": 7
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,275 @@
+{
+    "content": "set kitchen thermostat to 26 degrees\n",
+    "language": "en",
+    "version": "sensei: 3.3.5; disambiguator: 15.0-QNTX-2016",
+    "paragraphs": [
+        {
+            "sentences": [
+                0
+            ],
+            "start": 0,
+            "end": 36
+        }
+    ],
+    "sentences": [
+        {
+            "phrases": [
+                0,
+                1,
+                2
+            ],
+            "start": 0,
+            "end": 36
+        }
+    ],
+    "phrases": [
+        {
+            "tokens": [
+                0,
+                1,
+                2
+            ],
+            "type": "NP",
+            "start": 0,
+            "end": 22
+        },
+        {
+            "tokens": [
+                3,
+                4
+            ],
+            "type": "PP",
+            "start": 23,
+            "end": 36
+        },
+        {
+            "tokens": [],
+            "type": "CR",
+            "start": 36,
+            "end": 36
+        }
+    ],
+    "tokens": [
+        {
+            "syncon": 143901,
+            "start": 0,
+            "end": 3,
+            "type": "ADJ",
+            "lemma": "set",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 0
+        },
+        {
+            "syncon": 16780,
+            "start": 4,
+            "end": 11,
+            "type": "NOU",
+            "lemma": "kitchen",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 0
+        },
+        {
+            "syncon": 20605,
+            "start": 12,
+            "end": 22,
+            "type": "NOU",
+            "lemma": "thermostat",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 0
+        },
+        {
+            "syncon": -1,
+            "start": 23,
+            "end": 25,
+            "type": "PRE",
+            "lemma": "to",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 1
+        },
+        {
+            "syncon": -1,
+            "vsyn": {
+                "id": -436162,
+                "parent": 56387
+            },
+            "start": 26,
+            "end": 36,
+            "type": "NOU.MEA",
+            "lemma": "26 degree",
+            "pos": "_",
+            "paragraph": 0,
+            "sentence": 0,
+            "phrase": 1,
+            "atoms": [
+                {
+                    "start": 26,
+                    "end": 28,
+                    "type": "ADJ",
+                    "lemma": "26"
+                },
+                {
+                    "start": 29,
+                    "end": 36,
+                    "type": "NOU",
+                    "lemma": "degrees"
+                }
+            ]
+        }
+    ],
+    "mainSentences": [
+        {
+            "value": "set kitchen thermostat to 26 degrees",
+            "score": 100.0,
+            "start": 0,
+            "end": 36
+        }
+    ],
+    "mainPhrases": [
+        {
+            "value": "kitchen thermostat",
+            "score": 89.59,
+            "positions": [
+                {
+                    "start": 4,
+                    "end": 22
+                }
+            ]
+        },
+        {
+            "value": "set kitchen thermostat",
+            "score": 10.3,
+            "positions": [
+                {
+                    "start": 0,
+                    "end": 22
+                }
+            ]
+        }
+    ],
+    "mainLemmas": [
+        {
+            "value": "thermostat",
+            "score": 59.5,
+            "positions": [
+                {
+                    "start": 12,
+                    "end": 22
+                }
+            ]
+        },
+        {
+            "value": "kitchen",
+            "score": 32.9,
+            "positions": [
+                {
+                    "start": 4,
+                    "end": 11
+                }
+            ]
+        }
+    ],
+    "mainSyncons": [
+        {
+            "syncon": 20605,
+            "lemma": "thermostat",
+            "score": 52.5,
+            "positions": [
+                {
+                    "start": 12,
+                    "end": 22
+                }
+            ]
+        },
+        {
+            "syncon": 16780,
+            "lemma": "kitchen",
+            "score": 31.5,
+            "positions": [
+                {
+                    "start": 4,
+                    "end": 11
+                }
+            ]
+        },
+        {
+            "syncon": 143901,
+            "lemma": "situate",
+            "score": 15.89,
+            "positions": [
+                {
+                    "start": 0,
+                    "end": 3
+                }
+            ]
+        }
+    ],
+    "topics": [
+        {
+            "label": "mechanics",
+            "id": 223,
+            "score": 13.39,
+            "winner": false
+        },
+        {
+            "label": "technical terminology",
+            "id": 389,
+            "score": 9.6,
+            "winner": false
+        },
+        {
+            "label": "construction industry",
+            "id": 114,
+            "score": 1.6,
+            "winner": false
+        }
+    ],
+    "entities": [
+        {
+            "type": "MEA",
+            "lemma": "26 degree",
+            "syncon": -1,
+            "positions": [
+                {
+                    "start": 26,
+                    "end": 36
+                }
+            ]
+        }
+    ],
+    "extractions": [
+        {
+            "namespace": "0",
+            "template": "THERMOSTAT",
+            "fields": [
+                {
+                    "name": "ROOM",
+                    "value": "kitchen",
+                    "positions": [
+                        {
+                            "start": 4,
+                            "end": 11
+                        }
+                    ]
+                },
+                {
+                    "name": "TEMPERATURE",
+                    "value": "26 degree",
+                    "positions": [
+                        {
+                            "start": 26,
+                            "end": 36
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

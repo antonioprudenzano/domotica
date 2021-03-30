@@ -1,0 +1,82 @@
+{
+  "document": {
+    "parse_time": 0.05,
+    "analysis_time": 0.05
+  },
+  "match_info": {
+    "pivot_attributes": {
+      "match": 4,
+      "match_with_combo": 0
+    },
+    "sequences": {
+      "match": 3
+    },
+    "rules": {
+      "match": 1,
+      "segment": [],
+      "categorization": [],
+      "extraction": [
+        {
+          "template": "LIGHT",
+          "fields": [
+            {
+              "field": "BRIGHTNESS",
+              "value": "50%",
+              "instance": [
+                {
+                  "group_by": 0,
+                  "text": "50%",
+                  "rule_details": [
+                    {
+                      "id": 1,
+                      "label": ""
+                    }
+                  ],
+                  "pos": 27,
+                  "len": 3,
+                  "snt": 1,
+                  "snt_begin": 0,
+                  "snt_end": 29,
+                  "syncon": -1,
+                  "ancestor": 100011229
+                }
+              ]
+            },
+            {
+              "field": "NAME",
+              "value": "penisola",
+              "instance": [
+                {
+                  "group_by": 100,
+                  "text": "penisola",
+                  "rule_details": [
+                    {
+                      "id": 1,
+                      "label": ""
+                    }
+                  ],
+                  "pos": 4,
+                  "len": 8,
+                  "snt": 1,
+                  "snt_begin": 0,
+                  "snt_end": 29,
+                  "syncon": -1,
+                  "ancestor": -1
+                }
+              ]
+            }
+          ],
+          "instances": 0
+        }
+      ],
+      "tagger": []
+    },
+    "checksum": "0466bab0"
+  },
+  "script_info": {
+    "onTagger": []
+  },
+  "properties": {
+    "ANNOTATIONS_MD5": ""
+  }
+}

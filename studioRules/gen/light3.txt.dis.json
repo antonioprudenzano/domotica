@@ -1,0 +1,238 @@
+{
+  "header": {
+    "version": "VR4",
+    "language": "EN",
+    "startddis_flags": [
+      "2048: disable cleanparagraph",
+      "4096: token absolute position"
+    ],
+    "code": 150
+  },
+  "paragraphs": [
+    {
+      "s": [
+        0
+      ],
+      "p": 0,
+      "l": 22
+    }
+  ],
+  "sentences": [
+    {
+      "g": [
+        0,
+        1,
+        2
+      ],
+      "p": 0,
+      "l": 22
+    }
+  ],
+  "groups": [
+    {
+      "gk": "VP",
+      "pr": 0,
+      "pk": "INDEPENDENT",
+      "lt": 0,
+      "t": [
+        0,
+        1,
+        2
+      ],
+      "p": 0,
+      "l": 7
+    },
+    {
+      "gk": "NP",
+      "pr": 0,
+      "pk": "INDEPENDENT",
+      "lt": 4,
+      "t": [
+        3,
+        4
+      ],
+      "p": 8,
+      "l": 14
+    },
+    {
+      "gk": "CR"
+    }
+  ],
+  "tokens": [
+    {
+      "p": 0,
+      "l": 7,
+      "gt": "VER",
+      "gd": "AN__",
+      "ga": {
+        "tense": "simple present",
+        "cont": "not continuous"
+      },
+      "bf": "turn on",
+      "bfid": 499297,
+      "syn": 68552,
+      "esyn": [
+        72648
+      ],
+      "it": 1,
+      "ia": 0,
+      "pos": "_"
+    },
+    {
+      "p": 0,
+      "l": 4,
+      "gt": "VER",
+      "gd": "AN__",
+      "ga": {
+        "tense": "simple present",
+        "cont": "not continuous"
+      },
+      "bf": "turn",
+      "bfid": 499272,
+      "syn": -1,
+      "it": 0,
+      "ia": 1
+    },
+    {
+      "p": 5,
+      "l": 2,
+      "gt": "PRE",
+      "gd": "",
+      "ga": {},
+      "bf": "on",
+      "bfid": 432427,
+      "it": 0,
+      "ia": 1
+    },
+    {
+      "p": 8,
+      "l": 7,
+      "gt": "NOU",
+      "gd": "NS",
+      "ga": {
+        "gender": "neutral",
+        "number": "singular"
+      },
+      "bf": "kitchen",
+      "bfid": 405245,
+      "syn": 16780,
+      "esyn": [
+        100043164,
+        17545
+      ],
+      "it": 1,
+      "ia": 1,
+      "pos": "_"
+    },
+    {
+      "p": 16,
+      "l": 6,
+      "gt": "NOU",
+      "gd": "NP",
+      "ga": {
+        "gender": "neutral",
+        "number": "plural"
+      },
+      "bf": "light",
+      "bfid": 409607,
+      "syn": 16990,
+      "esyn": [
+        100210064,
+        17772
+      ],
+      "it": 1,
+      "ia": 1,
+      "pos": "_"
+    }
+  ],
+  "domains": [
+    {
+      "name": "electronics",
+      "r": 15,
+      "s": 7.5,
+      "m": 0
+    },
+    {
+      "name": "electricity",
+      "r": 15,
+      "s": 3.9,
+      "m": 0
+    },
+    {
+      "name": "construction industry",
+      "r": 15,
+      "s": 3.6,
+      "m": 0
+    }
+  ],
+  "mainsentences": [
+    {
+      "id": 0,
+      "text": "turn on kitchen lights",
+      "s": 100.0
+    }
+  ],
+  "maingroups": [
+    {
+      "text": "kitchen light",
+      "s": 97.7,
+      "pl": [
+        [
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "text": "turn on kitchen light",
+      "s": 2.2,
+      "pl": [
+        [
+          0,
+          22
+        ]
+      ]
+    }
+  ],
+  "mainlemmas": [
+    {
+      "text": "light",
+      "s": 51.6
+    },
+    {
+      "text": "kitchen",
+      "s": 48.3
+    }
+  ],
+  "mainsyncons": [
+    {
+      "syn": 16990,
+      "esyn": [
+        100210064
+      ],
+      "s": 52.9
+    },
+    {
+      "syn": 16780,
+      "esyn": [
+        100043164
+      ],
+      "s": 47.0
+    }
+  ],
+  "entities": [],
+  "logic": [
+    [
+      {
+        "type": "action",
+        "value": "turn on",
+        "group": 0
+      },
+      {
+        "type": "object",
+        "value": "kitchen lights",
+        "group": 1
+      }
+    ]
+  ]
+}
