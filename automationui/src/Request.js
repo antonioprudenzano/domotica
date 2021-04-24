@@ -1,144 +1,88 @@
 import axios from 'axios'
 
-const requestIp = '128.116.170.243'
-
+const requestIp = process.env.REACT_APP_REQUEST_IP
+const port = 9000
 
 export const getRooms = async () => {
-  let res = await axios.get(`http://${requestIp}:9000/room/`)
-  .then(response => {
-    return response
-  })
-  return res
+  return axios.get(`http://${requestIp}:${port}/room/`)
 }
 
 export const getRoomByID = async (id) => {
-  let res = await axios.get(`http://${requestIp}:9000/room/${id}/`)
-  .then(response => {
-    return response
-  })
-  return res
+  return axios.get(`http://${requestIp}:${port}/room/${id}/`)
 }
 
 export const updateThermostatInfo = async (id, data) => {
-  let res = await axios.patch(`http://${requestIp}:9000/thermostat/${id}/`, data, {
+  return axios.patch(`http://${requestIp}:${port}/thermostat/${id}/`, data, {
     headers: {
       'Content-Type' : 'application/json'
     }
   })
-  .then(response => {
-    return response
-  })
-  return res
 }
 
 export const updateLightInfo = async (id, data) => {
-  let res = await axios.patch(`http://${requestIp}:9000/light/${id}/`, data, {
+  return axios.patch(`http://${requestIp}:${port}/light/${id}/`, data, {
     headers: {
       'Content-Type' : 'application/json'
     }
   })
-  .then(response => {
-    return response
-  })
-  return res
 }
 
 export const getThermostatInfo = async (id) => {
-  let res = await axios.get(`http://${requestIp}:9000/thermostat/${id}/`)
-  .then(response => {
-    return response
-  })
-  return res
+  return axios.get(`http://${requestIp}:${port}/thermostat/${id}/`)
 }
 
 export const getLightInfo = async (id) => {
-  let res = await axios.get(`http://${requestIp}:9000/light/${id}/`)
-  .then(response => {
-    return response
-  })
-  return res
+  return axios.get(`http://${requestIp}:${port}/light/${id}/`)
 }
 
 export const deleteRoom = async (id) => {
-  let res = await axios.delete(`http://${requestIp}:9000/room/${id}/`)
-  .then(response => {
-    return response
-  })
-  return res
+  return axios.delete(`http://${requestIp}:${port}/room/${id}/`)
 }
 
 export const deleteThermostat = async (id) => {
-  let res = await axios.delete(`http://${requestIp}:9000/thermostat/${id}/`)
-  .then(response => {
-    return response
-  })
-  return res
+  return axios.delete(`http://${requestIp}:${port}/thermostat/${id}/`)
 }
 
 export const deleteLight = async (id) => {
-  let res = await axios.delete(`http://${requestIp}:9000/light/${id}/`)
-  .then(response => {
-    return response
-  })
-  return res
+  return axios.delete(`http://${requestIp}:${port}/light/${id}/`)
 }
 
 export const addLight = async(data) => {
-  let res = await axios.post(`http://${requestIp}:9000/light/`, data, {
+  return axios.post(`http://${requestIp}:${port}/light/`, data, {
     headers: {
       'Content-Type' : 'application/json'
     }
   })
-  .then(response => {
-    return response
-  })
-  return res
 }
 
 export const addThermostat = async(data) => {
-  let res = await axios.post(`http://${requestIp}:9000/thermostat/`, data, {
+  return axios.post(`http://${requestIp}:${port}/thermostat/`, data, {
     headers: {
       'Content-Type' : 'application/json'
     }
   })
-  .then(response => {
-    return response
-  })
-  return res
 }
 
 export const addRoom = async(data) => {
-  let res = await axios.post(`http://${requestIp}:9000/room/`, data, {
+  return axios.post(`http://${requestIp}:${port}/room/`, data, {
     headers: {
       'Content-Type' : 'application/json'
     }
   })
-  .then(response => {
-    return response
-  })
-  return res
 }
 
 export const analyzePhrase = async(data) => {
-  let res = await axios.post(`http://${requestIp}:9000/analyze/`, data, {
+  return axios.post(`http://${requestIp}:${port}/analyze/`, data, {
     headers: {
       'Content-Type' : 'application/json'
     }
   })
-  .then(response => {
-    return response
-  })
-  return res
 }
 
 export const recognizeAudio = async(data) => {
-  let res = await axios.post(`http://${requestIp}:9000/recognize/`, data, {
+  return axios.post(`http://${requestIp}:${port}/recognize/`, data, {
     headers: {
       'Content-Type' : 'application/json'
     }
   })
-  .then(response => {
-    return response
-  })
-  return res
 }

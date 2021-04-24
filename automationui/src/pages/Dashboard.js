@@ -1,15 +1,12 @@
 import React from "react";
-import Light from "../components/Light";
-import Thermostat from "../components/Thermostat";
+
 import {
-  recognizeAudio,
   getRooms,
   getRoomByID,
   addLight,
   addThermostat,
   addRoom,
   deleteRoom,
-  analyzePhrase,
 } from "../Request";
 import {
   Layout,
@@ -22,9 +19,7 @@ import {
   Tabs,
   Input,
   message,
-  Modal,
 } from "antd";
-import { ReactMic } from "react-mic";
 
 import "../styles/dashboard.css";
 
@@ -38,13 +33,15 @@ import {
   MessageOutlined,
 } from "@ant-design/icons";
 
-const { TextArea } = Input;
+import Light from "../components/Light";
+import Thermostat from "../components/Thermostat";
+import CommandModal from "../components/CommandModal";
+
 const { Option } = Select;
 const { Header, Sider, Content } = Layout;
 const { TabPane } = Tabs;
 
 const Dashboard = () => {
-  
   const [collapsed, setCollapsed] = React.useState(false);
   const [available, setAvailable] = React.useState(false);
   const [currentRoomID, setCurrentRoomID] = React.useState();
@@ -55,15 +52,9 @@ const Dashboard = () => {
   const [delComp, setDelComp] = React.useState(false);
   const [display, setDisplay] = React.useState(false);
   const [showAnalyze, setShowAnalyze] = React.useState(false);
-  const [loadingAnalyze, setLoadingAnalyze] = React.useState(false);
   const [refresh, setRefresh] = React.useState(false);
 
-  //record states
-  const [isRecording, setIsRecording] = React.useState(false);
-  const [isComputing, setIsComputing] = React.useState(false);
-
   const tabs = { 1: "addRoomForm", 2: "addCompForm" };
-  const [form] = Form.useForm();
 
   const refreshRooms = async () => {
     let response = await getRooms();
@@ -89,20 +80,6 @@ const Dashboard = () => {
     setRoomData(tmp.data);
     setCurrentRoomID(tmp.data.id);
     setRefresh(!refresh);
-  };
-
-  const handleAnalyze = async (values) => {
-    setLoadingAnalyze(true);
-    let res = await analyzePhrase(JSON.stringify({ phrase: values.phrase }));
-    if (res.data.ERROR) {
-      message.error("I didn't understand!");
-    } else {
-      setShowAnalyze(false);
-      if (res.data.roomID === currentRoomID) changeRoom(res.data.roomID);
-      else if (res.data.roomID === 0) changeRoom(currentRoomID);
-      message.success("Command executed");
-    }
-    setLoadingAnalyze(false);
   };
 
   const handleSubmit = async (values) => {
@@ -176,20 +153,6 @@ const Dashboard = () => {
     }
   };
 
-  const audioRecognize = async (audio) => {
-    setIsComputing(true);
-    console.log(audio);
-    var fd = new FormData();
-    fd.append("audio", audio.blob);
-    await recognizeAudio(fd).then((res) => {
-      console.log(res.data);
-      form.setFieldsValue({
-        phrase: res.data.transcription,
-      });
-      setIsComputing(false);
-    });
-  };
-
   React.useEffect(() => {
     async function initialSetup() {
       let tmpRooms = await refreshRooms();
@@ -215,14 +178,7 @@ const Dashboard = () => {
             collapsedWidth={0}
             style={{ overflow: "auto" }}
           >
-            <div
-              style={{
-                padding: "20px 24px",
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "flex-end",
-              }}
-            >
+            <div className="sider-header">
               <HomeOutlined style={{ fontSize: "25px", color: "#ffffff" }} />
               <p
                 style={{
@@ -250,16 +206,7 @@ const Dashboard = () => {
               {rooms.length > 0
                 ? rooms.map((room) => {
                     return (
-                      <Menu.Item
-                        key={room.id}
-                        style={{
-                          margin: 0,
-                          display: "flex",
-                          flexDirection: "row",
-                          justifyContent: "space-between",
-                          alignItems: "center",
-                        }}
-                      >
+                      <Menu.Item key={room.id} className="room-menu-item">
                         {room.name.charAt(0).toUpperCase() + room.name.slice(1)}
                         {delComp ? (
                           <Button
@@ -286,16 +233,8 @@ const Dashboard = () => {
             </Menu>
           </Sider>
           <Layout className="site-layout">
-            <Header
-              className="site-layout-background"
-              style={{
-                padding: 0,
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-              }}
-            >
-              {React.createElement(collapsed ? MenuOutlined : MenuOutlined, {
+            <Header className="site-layout-header">
+              {React.createElement(MenuOutlined, {
                 className: "trigger",
                 onClick: toggleCollapsed,
               })}
@@ -307,89 +246,15 @@ const Dashboard = () => {
                   : false}
               </h2>
             </Header>
-            <Content
-              className="site-layout-background"
-              style={{
-                margin: "16px 16px",
-                display: "flex",
-                flexDirection: "row",
-                background: "#f0f2f5",
-                flexWrap: "wrap",
-                overflow: "auto",
-              }}
-            >
+            <Content className="site-layout-content">
               {renderRoomComponents("light")}
               {renderRoomComponents("thermostat")}
-              <Modal
-                title="Type a command to execute"
+              <CommandModal
                 visible={showAnalyze}
-                footer={false}
-                onCancel={(e) => {
-                  !loadingAnalyze && setShowAnalyze(false);
-                }}
-                bodyStyle={{ padding: "24px" }}
-                destroyOnClose="true"
-              >
-                <Form id="analyzeForm" onFinish={handleAnalyze} form={form}>
-                  <Form.Item
-                    name="phrase"
-                    rules={[
-                      {
-                        required: true,
-                        message: "Please insert a command to execute",
-                      },
-                    ]}
-                  >
-                    <TextArea
-                      rows={4}
-                      allowClear="true"
-                      placeholder="e.g. Turn on Kitchen lights"
-                    />
-                  </Form.Item>
-                  <ReactMic
-                    record={isRecording}
-                    className="audio-wave"
-                    mimeType="audio/webm"
-                    onStop={(audioRecorded) => audioRecognize(audioRecorded)}
-                    noiseSuppression={true}
-                  />
-                  <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
-                  >
-                    <Button
-                      onClick={(e) => setIsRecording(!isRecording)}
-                      type="primary"
-                      loading={isComputing}
-                    >
-                      {!isRecording ? "Record" : "Stop Recording"}
-                    </Button>
-                    <Form.Item
-                      style={{
-                        textAlign: "right",
-                        marginRight: 10,
-                        marginBottom: 0,
-                      }}
-                    >
-                      <Button
-                        type="default"
-                        onClick={(e) => {
-                          !loadingAnalyze && setShowAnalyze(false);
-                        }}
-                        style={{ marginRight: 10 }}
-                      >
-                        Cancel
-                      </Button>
-                      <Button
-                        type="primary"
-                        htmlType="submit"
-                        loading={loadingAnalyze}
-                      >
-                        Submit
-                      </Button>
-                    </Form.Item>
-                  </div>
-                </Form>
-              </Modal>
+                onVisibleChange={setShowAnalyze}
+                changeRoom={changeRoom}
+                currentRoom={currentRoomID}
+              />
               <Button
                 type="primary"
                 shape="circle"

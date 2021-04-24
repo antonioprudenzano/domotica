@@ -1,1 +1,0 @@
-set living-room light brightness to 80%.

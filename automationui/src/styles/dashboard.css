@@ -1,4 +1,4 @@
-.mainBox{
+.mainBox {
   height: 100%;
 }
 .trigger {
@@ -19,9 +19,35 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
-.site-layout .site-layout-background {
+.sider-header{
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.site-layout .site-layout-header {
   display: flex;
   background: #fff;
+  padding: 0;
+  flex-direction: row;
+  align-items: center;
+}
+.site-layout .site-layout-content {
+  display: flex;
+  margin: 16px;
+  flex-direction: row;
+  background-color: #f0f2f5;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.ant-menu .room-menu-item {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .loadBox {
@@ -31,32 +57,32 @@
   margin-right: -50%;
 }
 
-.addBtn{
+.addBtn {
   position: fixed;
   bottom: 20px;
   right: 20px;
 }
 
-.delBtn{
+.delBtn {
   position: fixed;
   bottom: 20px;
   right: 75px;
 }
 
-.commandBtn{
+.commandBtn {
   position: fixed;
   bottom: 20px;
   right: 130px;
 }
 
-.ant-layout-content{
+.ant-layout-content {
   flex: none;
 }
 
-.ant-popover{
+.ant-popover {
   position: fixed;
 }
 
-.audio-wave{
+.audio-wave {
   display: none;
 }
