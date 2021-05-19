@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "static-webbing-208119",
+  "private_key_id": "61a1fbc7e2a83f9f89aea8f821de3938a7ea0b1c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC4eQdFghpqZ7AR\ncc6ho81AsEAPPZdZowe5MPZEdjo4eGPGAMbxqaM8aWbYfRgWjPBzio5puDL/uhqO\nr+yDX6I1G12amR4rJWfPa8IFopWA9sm8dfxUgQGIcTsMMy73kJCmDif8cJflRDso\ntyDe3fYEtpyLVsr5KgYTkXDkaxFlIyJvC4NV1SjlFB71O8npgDKMO8iRPiK0o56a\n1WbGPSK9kqjLTufnSHrqbgB8CNQ6kzKfL3fEM9mHJX3pu/JSCUIh8ihGP8BD7jIg\nVF2nKjS6G2PFmW2/8YBUBKQTLytAoQNfc0fSWNfBNHmfNXm7hdwRovX7ZWt8nnpB\nNiBXPoHBAgMBAAECggEAEDzhCbqFyjt1yVdP9bT2Ln1FKkJE5gg+eAvqBYU1oz5f\no/ByEpgYzQrHGYPLYMLHsJfv6LjkzlNKnqg4JKlAnTWbM+5J9EjO3jhxQ+83gzpV\n8B+fli2j3ad/59dCiVqhjOhely8vA6iRn4gdHdkCXJBZb790TuHm1oadHhIZniIG\nrGtPCU/hFHV++kkOcANin8oLA4wt/BfpYukuA3RwtZar+aqM1o2hgxvJRbMFt9jK\nMd1jPfZ3ytWyYsJI6huBlIK+bz7sgr2e1rTudAsaWGmNfF5SyGjN878EbVTM1s4T\njfe8xjurBDCKkaeJqs7jdLPeLEzg07E2RBgp1TOhBQKBgQD7sA2dyQLvrmI3MgZs\nw9lHtye7EoMqyXNNn4h7e2AQVsbgyqgV4psdjLHKo8nUR2mYdWUDCD/wLhXYbB9u\nZI/PQHWQQtHkji1P/QbG4RXgNYX0NVosW3famfTTsEvZq1GSlEIfUc3BCLNsDBMe\n38zWQUhMfDPuXRMoSCWs1JNhNQKBgQC7oiiZtykeVuXwsSgV0apOWecHpPPbvP8x\nHZ+Hwoc9Smk9PiVfVRQjlnU+4x3SDwfrDkMoIo3jdFp9V68DS2QM+rNeW2QEcNdY\nf8XX9vglAvla7oBT4FPd0S7+BhA1p4I20wL5IYYHoLRRt9RK46+aYlcYYzjwPsXY\nIh27+Rcb3QKBgCBKPfT4TQAjB0a9jEV3+vBQdzBw95MNtVVIGmJ9OZ3fBDTiyx3D\nrNLlsgmlacdqQgnlRchVzp4py3Owq3emPyz/wBV5/SOtefLBK5VoWz4gn8bs8Vyv\nf3j0N4zRGWobqKN9kd4iyJrzWtGJ2woi/Eygo33skV0LY+HPH8ZEn4PhAoGACPDy\nRFjxEawMawrWISwLlI4+LyQSJs97zaheuMZxUV9hYnS6rS9NtWBvF98UxbTHqNDW\nLGxxHHyn7z8lbN/D1caAk6eBPaDu8h2snNz8+C6LGWUyIk0XUgOs3JgHX7cqwlgN\n1TdevrBOx3IeIK9258F16wiXZwNmxCTkC9gT3NUCgYEAwUAtzeOEMRliFNs1UxDU\nJJ27SIsoNygeiXF3mcVR7UFSGtcjrHPeXlMfwNL5Zw5sLjfk1CzQAipSp37CRxNq\ncqBQlHsTjEk394mGyKu5FwwldY9b6ZHWRL+Wvscmfa3qeIxHbEJjDS9tlbsGDXC5\nKwZKuq2Qt7QA7BN6/NjDhUM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "antonio-prudenzano@static-webbing-208119.iam.gserviceaccount.com",
+  "client_id": "103424285972147794730",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/antonio-prudenzano%40static-webbing-208119.iam.gserviceaccount.com"
+}

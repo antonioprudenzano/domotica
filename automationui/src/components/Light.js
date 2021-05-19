@@ -9,12 +9,14 @@ const Light = (props) => {
   const [lightInfo, setLightInfo] = React.useState(props.data);
   const [available, setAvailable] = React.useState(true);
 
+
+
   const lightDelete = async (lightID) => {
     await deleteLight(lightID);
   };
 
   React.useEffect(() => {
-    async function initialSetup(){
+    async function initialSetup() {
       getLightInfo(props.data.id).then(res => {
         setLightInfo(res.data);
         setChecked(res.data.light_status);
@@ -81,7 +83,11 @@ const Light = (props) => {
                 updateLightInfo(
                   lightInfo.id,
                   JSON.stringify({ light_status: val })
-                );
+                )
+                .then(res => {
+                  setLightInfo(res.data);
+                  props.websocket.send(JSON.stringify(res.data))
+                })
                 setChecked(val);
               }}
             />
@@ -93,12 +99,17 @@ const Light = (props) => {
               value={checked ? brightness : 0}
               marks={{ 0: "0%", 100: "100%" }}
               onChange={(val) => setBrightness(val)}
-              onAfterChange={(val) =>
+              onAfterChange={(val) => {
                 updateLightInfo(
                   lightInfo.id,
                   JSON.stringify({ brightness: val })
                 )
-              }
+                .then(res => {
+                  setLightInfo(res.data);
+                  props.websocket.send(JSON.stringify(res.data))
+                })
+                
+              }}
             />
           </div>
         </Card>

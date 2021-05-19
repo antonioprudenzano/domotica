@@ -53,8 +53,9 @@ const Dashboard = () => {
   const [display, setDisplay] = React.useState(false);
   const [showAnalyze, setShowAnalyze] = React.useState(false);
   const [refresh, setRefresh] = React.useState(false);
-
+  const [websocket, setWebsocket] = React.useState({})
   const tabs = { 1: "addRoomForm", 2: "addCompForm" };
+  const webSocketPort = 9000;
 
   const refreshRooms = async () => {
     let response = await getRooms();
@@ -133,6 +134,7 @@ const Dashboard = () => {
                 data={item}
                 delete={delComp}
                 refresh={refresh}
+                websocket={websocket}
               />
             );
           });
@@ -156,10 +158,22 @@ const Dashboard = () => {
   React.useEffect(() => {
     async function initialSetup() {
       let tmpRooms = await refreshRooms();
+      var ws = new WebSocket(`ws://${process.env.REACT_APP_REQUEST_IP}:${webSocketPort}/ws/light/`)
+      ws.onopen = (e) => {
+        console.log("WebSocket connected.")
+        setWebsocket(ws)
+      }
+      ws.onclose = (e) => {
+        console.log("WebSocket closed.")
+      }
+      ws.onmessage = (e) => {
+        console.log(e.data)
+      }
       if (tmpRooms.data.length > 0) {
         setCurrentRoomID(tmpRooms.data[0].id);
         await changeRoom(tmpRooms.data[0].id);
       }
+      
       setAvailable(true);
     }
     initialSetup();
