@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 .mainBox {
   height: 100%;
 }
@@ -85,4 +88,32 @@
 
 .audio-wave {
   display: none;
+}
+
+.swatch{
+  border-radius: 20px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgb(172, 172, 172);
+  cursor: pointer;
+}
+.color-picker{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.color-picker h4{
+  margin-bottom: 0;
+}
+.ant-popover-inner-content .react-colorful{
+  width: 150px;
+  height: 150px;
+}
+.popover {
+  position: absolute;
+  top: 255px;
+  border-radius: 9px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1;
 }

@@ -1,25 +1,18 @@
+import channels
 from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Thermostat, Light, Room
 from .serializers import ThermostatSerializer, LightSerializer, RoomSerializer
 from pysensei import Sensei
-import ffmpeg, socket, json
+import ffmpeg, json
 from google.cloud import speech
 from channels.layers import get_channel_layer
 from asgiref.sync import async_to_sync
+from rest_framework.test import APIClient
+
 
 client = speech.SpeechClient()
-
-
-'''serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-serversocket.bind(('', port))
-print("Server socket bindato su " + str(port))
-serversocket.listen(1)
-print("Server socket in ascolto...")
-socket_stream, addr = serversocket.accept()
-print("Connessione ricevuta da " + str(addr))
-socket_stream.send('Connesso'.encode())'''
 
 class Analyze(APIView):
   def post(self, request, format=None):
@@ -59,9 +52,6 @@ class Analyze(APIView):
       category = out.extractions._extractions[0]['template'] 
       extractedFields = out.extractions._extractions[0]['fields']
 
-      print(category)
-      print(extractedFields)
-
       for field in extractedFields:
         if field['name'] == "ROOM":
           if field['value'].lower() !=  "room":
@@ -71,15 +61,16 @@ class Analyze(APIView):
 
 
       if category == 'LIGHT':
-        lightID = getLightsID(roomID, deviceName)
-        for field in extractedFields:
-          if field['name'] == "STATE":
-            if field['value'] == 'on':
-              Light.objects.filter(id__in=lightID).update(light_status=True)
-            elif field['value'] == 'off':
-              Light.objects.filter(id__in=lightID).update(light_status=False)
-          elif field['name'] == "BRIGHTNESS":
-            Light.objects.filter(id__in=lightID).update(brightness=field['value'] if '%' not in field['value'] else field['value'][:-1])
+        lightsId = getLightsID(roomID, deviceName)
+        factory = APIClient()
+        for light in lightsId:
+          data = {'_id': light}
+          for field in extractedFields:
+            if field['name'] == "STATE":
+              data['light_status'] = True if field['value'] == "on" else False
+            elif field['name'] == "BRIGHTNESS":
+              data['brightness'] = int(field['value']) if '%' not in field['value'] else int(field['value'][:-1])
+          r = factory.patch('/light/' + str(light) + '/', data, format='json')
       elif category == 'THERMOSTAT':
         for field in extractedFields:
           if field['name'] == "TEMPERATURE":
@@ -130,17 +121,14 @@ class ThermostatView(viewsets.ModelViewSet):
 class LightView(viewsets.ModelViewSet):
   queryset = Light.objects.all()
   serializer_class = LightSerializer
-
-  '''def get_queryset(self):
+  
+  def get_queryset(self):
     request = self.request
+    channel_layer = get_channel_layer()
     if(request.method == "PUT" or request.method == "PATCH"):
-      if(len(request.data) > 0):
-        print(request.data)
-        try:
-          socket_stream.send(json.dumps(request.data).encode())
-        except socket.error as e:
-          print("Connessione persa...")
-          print(e)
-          socket_stream.close()
-    return super().get_queryset()'''
+      async_to_sync(channel_layer.group_send)('light', {
+        'type': 'light_action',
+        'message': request.data
+      })
+    return super().get_queryset()
 

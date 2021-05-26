@@ -1,27 +1,28 @@
 import json
-from channels.generic.websocket import WebsocketConsumer
-from asgiref.sync import async_to_sync
+import re
+from channels.generic.websocket import AsyncWebsocketConsumer
 
-class LightConsumer(WebsocketConsumer):
-    def connect(self):
+
+class LightConsumer(AsyncWebsocketConsumer):
+    async def connect(self):
         self.device = "light"
         #Join group
-        async_to_sync(self.channel_layer.group_add)(
+        await self.channel_layer.group_add(
             self.device,
             self.channel_name
         )
-        self.accept()
+        await self.accept()
 
-    def disconnect(self, close_code):
+    async def disconnect(self, close_code):
         #leave group
-        async_to_sync(self.channel_layer.group_discard)(
+        await self.channel_layer.group_discard(
             self.device,
             self.channel_name
         )
 
-    def receive(self, text_data):
+    async def receive(self, text_data):
         received_values = json.loads(text_data)
-        async_to_sync(self.channel_layer.group_send)(
+        await self.channel_layer.group_send(
             self.device,
             {
                 'type': 'light_action',
@@ -29,8 +30,7 @@ class LightConsumer(WebsocketConsumer):
             }
         )
     
-    def light_action(self, event):
-
-        self.send(text_data=json.dumps({
-            'message': event['message']
-        }))
+    async def light_action(self, event):
+      await self.send(text_data=json.dumps({
+        'message': event['message']
+      }))

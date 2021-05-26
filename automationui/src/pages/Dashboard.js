@@ -44,7 +44,7 @@ const { TabPane } = Tabs;
 const Dashboard = () => {
   const [collapsed, setCollapsed] = React.useState(false);
   const [available, setAvailable] = React.useState(false);
-  const [currentRoomID, setCurrentRoomID] = React.useState();
+  const [currentRoomID, setCurrentRoomID] = React.useState(1);
   const [rooms, setRooms] = React.useState([]);
   const [roomData, setRoomData] = React.useState({});
   const [activeTab, setActiveTab] = React.useState(1);
@@ -54,6 +54,8 @@ const Dashboard = () => {
   const [showAnalyze, setShowAnalyze] = React.useState(false);
   const [refresh, setRefresh] = React.useState(false);
   const [websocket, setWebsocket] = React.useState({})
+  const [webSocketData, setWebSocketData] = React.useState({})
+  
   const tabs = { 1: "addRoomForm", 2: "addCompForm" };
   const webSocketPort = 9000;
 
@@ -84,7 +86,6 @@ const Dashboard = () => {
   };
 
   const handleSubmit = async (values) => {
-    console.log(values);
     var requestError = false;
     switch (values.device) {
       case "light":
@@ -135,6 +136,9 @@ const Dashboard = () => {
                 delete={delComp}
                 refresh={refresh}
                 websocket={websocket}
+                rgb={item.isRgb}
+                rgbColor = {item.color}
+                websocketData={webSocketData}
               />
             );
           });
@@ -155,25 +159,43 @@ const Dashboard = () => {
     }
   };
 
+  const openWebSocket = () => {
+
+    var ws = new WebSocket(`ws://${process.env.REACT_APP_REQUEST_IP}:${webSocketPort}/ws/light/`)
+    ws.onopen = (e) => {
+      console.log("WebSocket connected.")
+      setWebsocket(ws)
+      message.success("WebSocket connected.")
+    }
+
+    ws.onclose = (e) => {
+      if (e.code !== 1000) {
+        console.log("WebSocket closed. Reconnecting...")
+        message.warning("WebSocket closed. Reconnecting...")
+        setTimeout(() => { openWebSocket() }, 5000)
+      }
+    }
+
+    ws.onmessage = (e) => {
+      var received = JSON.parse(e.data).message
+      console.log("Received from Socket: ", received)
+      setWebSocketData(received);
+    }
+    
+    ws.onerror = (error) => {
+      console.log(error)
+      ws.close()
+    }
+  }
+
   React.useEffect(() => {
     async function initialSetup() {
       let tmpRooms = await refreshRooms();
-      var ws = new WebSocket(`ws://${process.env.REACT_APP_REQUEST_IP}:${webSocketPort}/ws/light/`)
-      ws.onopen = (e) => {
-        console.log("WebSocket connected.")
-        setWebsocket(ws)
-      }
-      ws.onclose = (e) => {
-        console.log("WebSocket closed.")
-      }
-      ws.onmessage = (e) => {
-        console.log(e.data)
-      }
+      openWebSocket()
       if (tmpRooms.data.length > 0) {
         setCurrentRoomID(tmpRooms.data[0].id);
         await changeRoom(tmpRooms.data[0].id);
       }
-      
       setAvailable(true);
     }
     initialSetup();
@@ -219,30 +241,30 @@ const Dashboard = () => {
             >
               {rooms.length > 0
                 ? rooms.map((room) => {
-                    return (
-                      <Menu.Item key={room.id} className="room-menu-item">
-                        {room.name.charAt(0).toUpperCase() + room.name.slice(1)}
-                        {delComp ? (
-                          <Button
-                            size="small"
-                            danger
-                            type="text"
-                            icon={
-                              <MinusCircleTwoTone
-                                twoToneColor="#ff0000"
-                                style={{ marginRight: 0 }}
-                              />
-                            }
-                            onClick={(e) => {
-                              roomDelete(room.id);
-                            }}
-                          />
-                        ) : (
-                          false
-                        )}
-                      </Menu.Item>
-                    );
-                  })
+                  return (
+                    <Menu.Item key={room.id} className="room-menu-item">
+                      {room.name.charAt(0).toUpperCase() + room.name.slice(1)}
+                      {delComp ? (
+                        <Button
+                          size="small"
+                          danger
+                          type="text"
+                          icon={
+                            <MinusCircleTwoTone
+                              twoToneColor="#ff0000"
+                              style={{ marginRight: 0 }}
+                            />
+                          }
+                          onClick={(e) => {
+                            roomDelete(room.id);
+                          }}
+                        />
+                      ) : (
+                        false
+                      )}
+                    </Menu.Item>
+                  );
+                })
                 : false}
             </Menu>
           </Sider>
@@ -254,9 +276,9 @@ const Dashboard = () => {
               })}
               <h2 style={{ fontWeight: "bold" }}>
                 {Object.keys(roomData).length !== 0 &&
-                roomData.constructor === Object
+                  roomData.constructor === Object
                   ? roomData.name.charAt(0).toUpperCase() +
-                    roomData.name.slice(1)
+                  roomData.name.slice(1)
                   : false}
               </h2>
             </Header>

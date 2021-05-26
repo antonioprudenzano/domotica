@@ -1,19 +1,34 @@
 import React from "react";
-import { Card, Slider, Switch, Button } from "antd";
+import { Card, Slider, Switch, Button, Popover } from "antd";
 import { BulbOutlined, MinusCircleTwoTone } from "@ant-design/icons";
 import { updateLightInfo, deleteLight, getLightInfo } from "../Request";
+import { HexColorPicker } from "react-colorful";
 
 const Light = (props) => {
   const [checked, setChecked] = React.useState(props.data.light_status);
   const [brightness, setBrightness] = React.useState(props.data.brightness);
   const [lightInfo, setLightInfo] = React.useState(props.data);
   const [available, setAvailable] = React.useState(true);
-
-
+  const [lightColor, setLightColor] = React.useState(props.rgbColor);
 
   const lightDelete = async (lightID) => {
     await deleteLight(lightID);
   };
+
+  const handleColorUpdate = () => {
+    updateLightInfo(
+      lightInfo.id,
+      JSON.stringify({ id: lightInfo.id, color: lightColor })
+    )
+    .then(res => {
+      setLightInfo(res.data);
+      //props.websocket.send(JSON.stringify(res.data))
+    })
+  }
+
+  const content = (
+    <HexColorPicker color={lightColor} onChange={setLightColor} onMouseUp={handleColorUpdate}/>
+  )
 
   React.useEffect(() => {
     async function initialSetup() {
@@ -21,7 +36,9 @@ const Light = (props) => {
         setLightInfo(res.data);
         setChecked(res.data.light_status);
         setBrightness(res.data.brightness);
+        setLightColor(res.data.color);
       });
+      
     }
     initialSetup()
   }, [props.refresh]);
@@ -71,7 +88,6 @@ const Light = (props) => {
               justifyContent: "space-between",
               alignItems: "center",
               marginBottom: 20,
-              paddingRight: 5,
             }}
           >
             <h4 style={{ margin: 0 }}>Status</h4>
@@ -82,16 +98,27 @@ const Light = (props) => {
               onChange={(val) => {
                 updateLightInfo(
                   lightInfo.id,
-                  JSON.stringify({ light_status: val })
+                  JSON.stringify({ id: lightInfo.id, light_status: val, brightness: lightInfo.brightness })
                 )
                 .then(res => {
                   setLightInfo(res.data);
-                  props.websocket.send(JSON.stringify(res.data))
+                  //props.websocket.send(JSON.stringify(res.data))
                 })
                 setChecked(val);
               }}
             />
           </div>
+          {props.rgb ?
+            <div className="color-picker">
+              <h4>Color</h4>
+              <Popover trigger="click" content={content} placement="bottom">
+                <div
+                  className="swatch"
+                  style={{ backgroundColor: lightColor }}
+                />
+              </Popover>
+            </div>
+          : false}
           <div>
             <h4>Brightness</h4>
             <Slider
@@ -102,11 +129,11 @@ const Light = (props) => {
               onAfterChange={(val) => {
                 updateLightInfo(
                   lightInfo.id,
-                  JSON.stringify({ brightness: val })
+                  JSON.stringify({ id: lightInfo.id, brightness: val })
                 )
                 .then(res => {
                   setLightInfo(res.data);
-                  props.websocket.send(JSON.stringify(res.data))
+                  //props.websocket.send(JSON.stringify(res.data))
                 })
                 
               }}
