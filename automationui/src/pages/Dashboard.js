@@ -19,6 +19,7 @@ import {
   Tabs,
   Input,
   message,
+  Switch,
 } from "antd";
 
 import "../styles/dashboard.css";
@@ -90,7 +91,7 @@ const Dashboard = () => {
     switch (values.device) {
       case "light":
         await addLight(
-          JSON.stringify({ room: values.room, name: values.lightName })
+          JSON.stringify({ room: values.room, name: values.lightName, isRgb: values.isRgb})
         );
         break;
       case "thermostat":
@@ -135,7 +136,6 @@ const Dashboard = () => {
                 data={item}
                 delete={delComp}
                 refresh={refresh}
-                websocket={websocket}
                 rgb={item.isRgb}
                 rgbColor = {item.color}
                 websocketData={webSocketData}
@@ -429,18 +429,26 @@ const Dashboard = () => {
                         </Select>
                       </Form.Item>
                       {display ? (
-                        <Form.Item
-                          name="lightName"
-                          label="Light Name"
-                          rules={[
-                            {
-                              required: true,
-                              message: "Please choose a name for your light",
-                            },
-                          ]}
-                        >
-                          <Input placeholder="Light name" />
-                        </Form.Item>
+                        <>
+                          <Form.Item
+                            name="lightName"
+                            label="Light Name"
+                            rules={[
+                              {
+                                required: true,
+                                message: "Please choose a name for your light",
+                              },
+                            ]}
+                          >
+                            <Input placeholder="Light name" />
+                          </Form.Item>
+                          <Form.Item
+                            name="isRgb"
+                            label="Is RGB?"
+                          >
+                            <Switch/>
+                          </Form.Item>
+                        </>
                       ) : (
                         false
                       )}

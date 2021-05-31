@@ -1,6 +1,0 @@
-projectKey=domotica
-serverUrl=http://localhost:9000
-serverVersion=8.8.0.42792
-dashboardUrl=http://localhost:9000/dashboard?id=domotica
-ceTaskId=AXj4nR--K6DxWsgjtFgb
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AXj4nR--K6DxWsgjtFgb

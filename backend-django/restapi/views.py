@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from .models import Thermostat, Light, Room
 from .serializers import ThermostatSerializer, LightSerializer, RoomSerializer
 from pysensei import Sensei
-import ffmpeg, json
+import ffmpeg
 from google.cloud import speech
 from channels.layers import get_channel_layer
 from asgiref.sync import async_to_sync
@@ -64,7 +64,7 @@ class Analyze(APIView):
         lightsId = getLightsID(roomID, deviceName)
         factory = APIClient()
         for light in lightsId:
-          data = {'_id': light}
+          data = {'id': light}
           for field in extractedFields:
             if field['name'] == "STATE":
               data['light_status'] = True if field['value'] == "on" else False

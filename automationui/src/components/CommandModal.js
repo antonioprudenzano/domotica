@@ -75,9 +75,7 @@ const CommandModal = (props) => {
         <ReactMic
           record={isRecording}
           className="audio-wave"
-          mimeType="audio/webm"
           onStop={(audioRecorded) => audioRecognize(audioRecorded)}
-          noiseSuppression={true}
         />
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Button
