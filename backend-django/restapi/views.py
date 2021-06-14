@@ -82,27 +82,12 @@ class Analyze(APIView):
 class Recognize(APIView):
   def post(self, request, format=None):
 
-    #save client recorded audio as webm file
-    with open("audio.webm", "wb") as aud:
-      audio_stream = request.data["audio"].read()
-      aud.write(audio_stream)
-      aud.close
-      
-    
-    #convert .webm file to .wav with ffmpeg
-    stream = ffmpeg.input('audio.webm')
-    stream = ffmpeg.output(stream, 'converted.wav')
-    stream = ffmpeg.overwrite_output(stream)
-    ffmpeg.run(stream)
-
-    with open("converted.wav", "rb") as aud:
-      content = aud.read()
-
     config = speech.RecognitionConfig(
       encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
       language_code="en-US",
+      audio_channel_count=2,
     )
-    audio = speech.RecognitionAudio(content=content)
+    audio = speech.RecognitionAudio(content=request.data["audio"].read())
     response = client.recognize(config=config, audio=audio)
     for result in response.results:
       print("Transcript: {}".format(result.alternatives[0].transcript))

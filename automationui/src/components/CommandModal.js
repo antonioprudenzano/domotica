@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactMic } from "react-mic";
+import { ReactMic } from "@cleandersonlobo/react-mic";
 
 import { Button, Form, Modal, Input, message } from "antd";
 
