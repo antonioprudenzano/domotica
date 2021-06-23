@@ -30,7 +30,8 @@ INSTALLED_APPS = [
     'restapi',
     'colorfield',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'sslserver'
 ]
 
 MIDDLEWARE = [

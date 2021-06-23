@@ -18,15 +18,19 @@ const CommandModal = (props) => {
 
   const audioRecognize = async (audio) => {
     setIsComputing(true);
-    console.log(audio);
     var fd = new FormData();
     fd.append("audio", audio.blob);
     await recognizeAudio(fd).then((res) => {
       console.log(res.data);
-      form.setFieldsValue({
-        phrase: res.data.transcription,
-      });
-      setIsComputing(false);
+      if(res.data.transcription){
+        form.setFieldsValue({
+          phrase: res.data.transcription,
+        });
+        setIsComputing(false);
+      }else if(res.data.error){
+        message.error(res.data.error)
+        setIsComputing(false);
+      }
     });
   };
 

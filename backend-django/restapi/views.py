@@ -1,27 +1,30 @@
-import channels
 from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Thermostat, Light, Room
 from .serializers import ThermostatSerializer, LightSerializer, RoomSerializer
 from pysensei import Sensei
-import ffmpeg
 from google.cloud import speech
 from channels.layers import get_channel_layer
 from asgiref.sync import async_to_sync
 from rest_framework.test import APIClient
+import os
+
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "c:\\Users\\Anto\\Desktop\\Things\\stage\\task-2_stage\\backend-django\\chiavi_api.json"
 
 
 client = speech.SpeechClient()
 
 class Analyze(APIView):
   def post(self, request, format=None):
+    #gets the room id by its name
     def getRoomIDbyName(name):
       try:
         return Room.objects.filter(name__icontains = name).values('id')[0]['id']
       except:
         return 0
     
+    #gets the lights IDs from the database based on the room and the light name
     def getLightsID(room, name):
       lights = list()
       if room != 0 and name:
@@ -79,9 +82,12 @@ class Analyze(APIView):
     else:
       return Response({"ERROR": "Non ho capito"})
 
+#
+#   Speech to text recognition by Google Cloud API.
+#               (parte interessante)
+#
 class Recognize(APIView):
   def post(self, request, format=None):
-
     config = speech.RecognitionConfig(
       encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
       language_code="en-US",
@@ -89,10 +95,12 @@ class Recognize(APIView):
     )
     audio = speech.RecognitionAudio(content=request.data["audio"].read())
     response = client.recognize(config=config, audio=audio)
-    for result in response.results:
-      print("Transcript: {}".format(result.alternatives[0].transcript))
-    
-    return Response({"transcription": response.results[0].alternatives[0].transcript})
+    if(response):
+      for result in response.results:
+        print("Transcript: {}".format(result.alternatives[0].transcript))
+      return Response({"transcription": response.results[0].alternatives[0].transcript})
+    else:
+      return Response({"error": "You said nothing!"})
 
 
 class RoomView(viewsets.ModelViewSet):
@@ -106,6 +114,12 @@ class ThermostatView(viewsets.ModelViewSet):
 class LightView(viewsets.ModelViewSet):
   queryset = Light.objects.all()
   serializer_class = LightSerializer
+
+
+  #
+  #   Send received API data to the websocket channel
+  #              (parte interessante)
+  #
   
   def get_queryset(self):
     request = self.request

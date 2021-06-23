@@ -1,12 +1,11 @@
-import os
-
-import django
+import os, django
 from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter
 from django.core.asgi import get_asgi_application
 import restapi.routing
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'virtualautomation.settings')
+
 django.setup()
 
 application = ProtocolTypeRouter({
@@ -15,6 +14,5 @@ application = ProtocolTypeRouter({
     URLRouter(
       restapi.routing.websocket_urlpatterns
     )
-  ),
-  # Just HTTP for now. (We can add other protocols later.)
+  )
 })
